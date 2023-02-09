@@ -9,9 +9,19 @@
       Title="PageWelcome">
 
     <Grid>
-        <StackPanel>
-            <Button Name="ButtonUser" Click="ButtonUser_Click"/>
-            <Button Name="ButtonAdmin" Click="ButtonAdmin_Click"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button 
+                Name="ButtonUser" 
+                Click="ButtonUser_Click"
+                Content="Продолжить"
+                Style="{StaticResource ButtonProceedAsUser}"
+                />
+            <Button 
+                Name="ButtonAdmin" 
+                Click="ButtonAdmin_Click"
+                Content="Войти с паролем"
+                Style="{StaticResource ButtonProceedAsAdmin}"
+                />
         </StackPanel>
     </Grid>
 </Page>

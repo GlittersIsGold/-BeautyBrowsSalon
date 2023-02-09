@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeautyBrows.Controller.Navigation;
+using BeautyBrows.View.Screens.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,10 @@ namespace BeautyBrows
         public MainWindow()
         {
             InitializeComponent();
+
+            FrameNavigation.Navigator = FrameMain;
+            
+            FrameMain.Navigate(new PageWelcome());
         }
     }
 }

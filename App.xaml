@@ -4,29 +4,71 @@
              xmlns:local="clr-namespace:BeautyBrows"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="2.5"/>
         </Style>
+
+        <Style TargetType="Grid" x:Key="GridHeader">
+            <Setter Property="Background" Value="#FF4A6D"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Background" Value="#FF4A6D"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        
         <Style TargetType="TextBox">
             <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="2.5"/>
         </Style>
+        
         <Style TargetType="PasswordBox">
             <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="2.5"/>
         </Style>
+        
         <Style TargetType="DataGrid">
             <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="2.5"/>
         </Style>
         
-        <Style>
-            <Setter Property="" Value=""/>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="2.5"/>
         </Style>
         
-        <Style>
-            <Setter Property="" Value=""/>
+        <Style TargetType="Button" x:Key="ButtonProceedAsUser">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#111111"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="150"/>
         </Style>
+
+        <Style TargetType="Button" x:Key="ButtonProceedAsAdmin">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="Background" Value="#E1E4FF"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Foreground" Value="#111111"/>
+        </Style>
+
     </Application.Resources>
 </Application>

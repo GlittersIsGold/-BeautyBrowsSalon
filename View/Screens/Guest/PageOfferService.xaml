@@ -1,0 +1,90 @@
+﻿<Page x:Class="BeautyBrows.View.Screens.User.PageOfferService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BeautyBrows.View.Screens.User"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageOfferService">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Данные"/>
+            <TextBlock Text="Сортировка"/>
+            
+        </StackPanel>
+        
+        <DataGrid 
+            Name="DataGridOfferService"
+            Grid.Row="1"
+            IsReadOnly="True"
+            AutoGenerateColumns="False"
+            >
+            
+            <DataGrid.Columns>
+
+                <DataGridTextColumn 
+                    Header="Наименование услуги" 
+                    Binding="{Binding Title}"
+                    Width="1.25*"
+                    />
+                <DataGridTextColumn 
+                    Header="Стоимость" 
+                    Binding="{Binding Cost}"
+                    Width="*"
+                    />
+                <DataGridTextColumn 
+                    Header="Продолжительность" 
+                    Binding="{Binding DurationInSeconds}"
+                    Width="*"
+                    />
+
+                <DataGridTemplateColumn Header="Фото" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding MainImagePath}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                
+                <DataGridTextColumn 
+                    Header="Скидка" 
+                    Binding="{Binding Discount}"
+                    Width="*"
+                    />
+                <DataGridTemplateColumn Width="*" Header="Действие">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button 
+                                    Name="BtnOfferService"
+                                    Click="BtnOfferService_Click"
+                                    Content="Заказать"
+                                    Width="100"
+                                    Height="50"
+                                    Style="{StaticResource ButtonProceedAsUser}"
+                                    />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Статистика"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\student.MGOK\Desktop\GitRepos\-BeautyBrowsSalon\App.xaml
-23816964
+61886569775
 21542635313
-22-803152152
+28243891982
 18-1875400447
-MainWindow.xaml;View\Screens\General\PageWelcome.xaml;
+MainWindow.xaml;View\Screens\Admin\PageAdministration.xaml;View\Screens\General\PageEnterCode.xaml;View\Screens\General\PageWelcome.xaml;View\Screens\Guest\PageOfferService.xaml;View\Windows\Alert\ExceptionWindow.xaml;
 
-True
+False
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeautyBrows.Controller.Navigation;
+using BeautyBrows.View.Screens.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +29,12 @@ namespace BeautyBrows.View.Screens.General
 
         private void ButtonAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameNavigation.Navigator.Navigate(new PageEnterCode());
         }
 
         private void ButtonUser_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameNavigation.Navigator.Navigate(new PageOfferService());
         }
     }
 }

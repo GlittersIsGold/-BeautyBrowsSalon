@@ -13,5 +13,6 @@ namespace BeautyBrows
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

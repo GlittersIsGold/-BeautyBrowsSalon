@@ -67,8 +67,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controller\DataAccess\Connetction.cs" />
+    <Compile Include="Controller\Navigation\FrameNavigation.cs" />
+    <Compile Include="View\Screens\Admin\PageAdministration.xaml.cs">
+      <DependentUpon>PageAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screens\General\PageEnterCode.xaml.cs">
+      <DependentUpon>PageEnterCode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Screens\General\PageWelcome.xaml.cs">
       <DependentUpon>PageWelcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screens\Guest\PageOfferService.xaml.cs">
+      <DependentUpon>PageOfferService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\Alert\ExceptionWindow.xaml.cs">
+      <DependentUpon>ExceptionWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -82,7 +96,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Screens\Admin\PageAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Screens\General\PageEnterCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Screens\General\PageWelcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Screens\Guest\PageOfferService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\Alert\ExceptionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,13 +203,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\DataAccess\" />
-    <Folder Include="Controller\Navigation\" />
     <Folder Include="Resources\Static\ServicePhoto\" />
     <Folder Include="Resources\Temporary\Storage\" />
-    <Folder Include="View\Screens\Admin\" />
-    <Folder Include="View\Screens\User\" />
-    <Folder Include="View\Windows\Alert\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Static\Logo\beauty_logo.ico" />

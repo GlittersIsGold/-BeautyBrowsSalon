@@ -5,9 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeautyBrows"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="CRM система" Height="450" Width="800">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Style="{StaticResource GridHeader}">
+            <TextBlock
+                Text="Бархатные бровки"
+                Style="{StaticResource Header}"
+                />
+        </Grid>
+        
         <Frame
+            Grid.Row="1"
             Name="FrameMain"
             NavigationUIVisibility="Hidden"
             />
