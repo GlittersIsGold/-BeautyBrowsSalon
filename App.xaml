@@ -1,0 +1,32 @@
+﻿<Application x:Class="BeautyBrows.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BeautyBrows"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        
+        <Style>
+            <Setter Property="" Value=""/>
+        </Style>
+        
+        <Style>
+            <Setter Property="" Value=""/>
+        </Style>
+    </Application.Resources>
+</Application>
