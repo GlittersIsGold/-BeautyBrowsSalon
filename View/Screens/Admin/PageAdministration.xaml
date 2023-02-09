@@ -9,6 +9,92 @@
       Title="PageAdministration">
 
     <Grid>
-        
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <TextBlock Text="Данные"/>
+                <TextBlock Text="Сортировка"/>
+
+            </StackPanel>
+
+            <DataGrid 
+            Name="DataGridOfferService"
+            Grid.Row="1"
+            IsReadOnly="True"
+            AutoGenerateColumns="False"
+            >
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn 
+                    Header="Наименование услуги" 
+                    Binding="{Binding Title}"
+                    Width="1.25*"
+                    />
+                    <DataGridTextColumn 
+                    Header="Стоимость" 
+                    Binding="{Binding Cost}"
+                    Width="*"
+                    />
+                    <DataGridTextColumn 
+                    Header="Продолжительность" 
+                    Binding="{Binding DurationInSeconds}"
+                    Width="*"
+                    />
+
+                    <DataGridTemplateColumn Header="Фото" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Image Source="{Binding MainImagePath}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTextColumn 
+                    Header="Скидка" 
+                    Binding="{Binding Discount}"
+                    Width="*"
+                    />
+                    <DataGridTemplateColumn Width="*" Header="Действие">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Button 
+                                    Name="BtnEditService"
+                                    Click="BtnEditService_Click"
+                                    Content="Редактировать"
+                                    Width="100"
+                                    Height="50"
+                                    Style="{StaticResource ButtonProceedAsUser}"
+                                    />
+                                    <Button 
+                                    Name="BtnDeleteService"
+                                    Click="BtnDeleteService_Click"
+                                    Content="Удалить"
+                                    Width="100"
+                                    Height="50"
+                                    Style="{StaticResource ButtonProceedAsUser}"
+                                    />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="Статистика"/>
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Page>

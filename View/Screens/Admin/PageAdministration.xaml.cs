@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeautyBrows.Controller.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace BeautyBrows.View.Screens.Admin
         public PageAdministration()
         {
             InitializeComponent();
+            DataGridOfferService.ItemsSource = Connetction.BrowsEntities.Services.ToList();
+        }
+
+        private void BtnEditService_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnDeleteService_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
