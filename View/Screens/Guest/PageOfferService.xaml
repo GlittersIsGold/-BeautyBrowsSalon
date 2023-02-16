@@ -17,8 +17,31 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Данные"/>
-            <TextBlock Text="Сортировка"/>
+
+            <ComboBox
+                Name="CmbServiceList"
+                SelectionChanged="CmbServiceList_SelectionChanged"
+                Width="200"
+                />
+
+            <TextBox 
+                Name="TbSearchQuery"
+                TextChanged="TbSearchQuery_TextChanged"
+                Width="500"
+                />
+
+            <StackPanel Orientation="Vertical">
+
+                <TextBlock>
+                    <Run Text="Найдено:"/>
+                </TextBlock>
+
+                <TextBlock>
+                    <Run Name="RunRecordsFound"/>
+                    <Run Text="шт."/>
+                </TextBlock>
+
+            </StackPanel>
             
         </StackPanel>
         
